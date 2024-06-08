@@ -20,7 +20,7 @@ const EditModal = ({ user, onSave, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white p-6 rounded shadow-lg w-full max-w-md">
+      <div className="bg-white p-6 rounded shadow-lg w-[98%] max-w-md">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl">Edit User</h2>
           <X onClick={onClose} className="cursor-pointer" />

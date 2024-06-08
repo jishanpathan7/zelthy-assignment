@@ -10,7 +10,7 @@ const UserList = () => {
   const [loading, setLoading] = useState(true);
   const [editingUser, setEditingUser] = useState(null);
 
-// Like function handler
+  // Like function handler
   const handleLike = (id) => {
     setUsers(
       users.map((user) =>
@@ -66,7 +66,7 @@ const UserList = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+    <div className="grid grid-cols-1 w-[90%] m-auto md:grid-cols-2 lg:grid-cols-4 gap-6 py-4">
       {users.map((user) => (
         <UserProfile
           key={user.id}

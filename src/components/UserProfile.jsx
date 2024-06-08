@@ -6,15 +6,15 @@ const UserProfile = ({ user, onLike, onDelete, onEdit }) => {
   const avatarUrl = `https://api.dicebear.com/8.x/avataaars/svg?seed=${user.username.split(".")[0]}`;
 
   return (
-    <div className="w-full md:w-[300px] border rounded flex flex-col items-left px-2 py-2">
+    <div className="w-full md:min-w-[300px] border rounded flex flex-col items-left">
       <div className="w-full flex justify-center items-center bg-[#f5f5f5]">
         <img
           src={avatarUrl}
           alt={user.username}
-          className="w-[50%] h-[100%] rounded-full mb-4 b"
+          className="w-[50%] h-[100%] rounded-full mb-4 mt-1"
         />
       </div>
-      <div className="text-left flex flex-col gap-2 mt-4 ml-2">
+      <div className="text-left flex flex-col gap-2 mt-4 ml-2 px-2">
         <h2 className="text-l font-bold">{user.name}</h2>
         <p>
           <Mail className="inline-block mr-2 w-4" />
@@ -31,7 +31,7 @@ const UserProfile = ({ user, onLike, onDelete, onEdit }) => {
           </a>
         </p>
       </div>
-      <div className="flex space-x-2 mt-4 justify-evenly items-center w-full">
+      <div className="flex space-x-2 mt-4 justify-evenly items-center w-full py-4">
         <button onClick={() => onLike(user.id)}>
           {user.liked ? (
             <Heart className="w-5 h-5 text-red-600" fill="red" />
